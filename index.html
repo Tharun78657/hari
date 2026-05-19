@@ -1,385 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HARI | Visual Director — Cinematic Storytelling</title>
-  <meta name="description" content="Hari — Senior Visual Editor & Cinematic Storyteller. 4+ years crafting compelling narratives through film, motion design and creative editing.">
+  <meta name="description"
+    content="Hari — Senior Visual Editor & Cinematic Storyteller. 4+ years crafting compelling narratives through film, motion design and creative editing.">
   <meta name="keywords" content="visual editor, cinematic, motion design, video editing, storytelling, Hari">
   <meta property="og:title" content="HARI | Visual Director">
   <meta property="og:description" content="Cinematic storytelling through visual editing and motion design.">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- Particle Canvas -->
-<canvas id="bg-canvas"></canvas>
 
-<!-- Cursor -->
-<div id="cursor"></div>
-<div id="cursor-trail"></div>
 
-<!-- Video Modal -->
-<div id="modal" role="dialog" aria-modal="true" aria-label="Video player">
-  <div class="close-modal" id="close-modal-btn" role="button" tabindex="0" aria-label="Close video">CLOSE [×]</div>
-  <div class="modal-content">
-    <iframe id="modal-iframe" width="100%" height="100%" src="" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-  </div>
-</div>
+  <!-- Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
 
-<!-- Header -->
-<header id="main-header">
-  <div class="container nav">
-    <div class="logo">HARI STUDIO</div>
-    <ul class="nav-links">
-      <li><a href="#work" id="nav-projects">PROJECTS</a></li>
-      <li><a href="#about" id="nav-about">ABOUT</a></li>
-      <li><a href="#contact" id="nav-contact">CONTACT</a></li>
-    </ul>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="hero container">
-  <div class="hero-bg-glow"></div>
-  <p class="hero-label">HI, I'M HARI</p>
-  <h1>Passionate Video Editor &<br><em>Motion Graphic Designer.</em></h1>
-  <p class="hero-desc">
-    I have 4 Years of Experience in <span class="badge">PR</span><br>
-    1 Year in <span class="badge">AE</span><br>
-    I specialize In Cutting Teasers, Trailers, Promos, With precision And Creativity.
-  </p>
-  <div class="hero-sub">
-    <a href="#work" id="hero-cta"><span>EXPLORE PORTFOLIO</span></a>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <span>SCROLL</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
-
-<!-- Marquee -->
-<div class="marquee-section" aria-hidden="true">
-  <div class="marquee-track">
-    <span>VISUAL DIRECTION</span><span class="dot">✦</span>
-    <span>MOTION DESIGN</span><span class="dot">✦</span>
-    <span>CINEMATIC EDIT</span><span class="dot">✦</span>
-    <span>COLOR GRADING</span><span class="dot">✦</span>
-    <span>SOUND DESIGN</span><span class="dot">✦</span>
-    <span>BRANDED CONTENT</span><span class="dot">✦</span>
-    <span>DOCUMENTARY</span><span class="dot">✦</span>
-    <span>VISUAL DIRECTION</span><span class="dot">✦</span>
-    <span>MOTION DESIGN</span><span class="dot">✦</span>
-    <span>CINEMATIC EDIT</span><span class="dot">✦</span>
-    <span>COLOR GRADING</span><span class="dot">✦</span>
-    <span>SOUND DESIGN</span><span class="dot">✦</span>
-    <span>BRANDED CONTENT</span><span class="dot">✦</span>
-    <span>DOCUMENTARY</span><span class="dot">✦</span>
-  </div>
-</div>
-
-<!-- Projects -->
-<section id="work" class="container">
-  <div class="section-title reveal">
-    <span class="section-num">01 — SELECTED WORKS</span>
-    <h2>Featured <span>Projects</span></h2>
-  </div>
-  <div class="project-grid">
-
-    <a href="javascript:void(0)" id="proj-army" class="project-card reveal tilt-card" onclick="openVideo('zuq_vwBGz0E')">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/zuq_vwBGz0E/maxresdefault.jpg" alt="Indian Army Assignment — Narrative Film" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>NARRATIVE / 2024</span>
-        <h3>Indian Army Assignment</h3>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" id="proj-youtube" class="project-card reveal tilt-card" onclick="openVideo('5txAqWaqnvM')" style="transition-delay:.08s">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/5txAqWaqnvM/maxresdefault.jpg" alt="YouTube's Future — Motion Design" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>MOTION DESIGN</span>
-        <h3>YouTube's Future</h3>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" id="proj-wedding" class="project-card reveal tilt-card" onclick="openVideo('j0dOccga7mI')" style="transition-delay:.16s">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/j0dOccga7mI/maxresdefault.jpg" alt="The Wedding Storyteaser — Cinematic Documentary" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>CINEMATIC DOCUMENTARY</span>
-        <h3>The Wedding Storyteaser</h3>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" id="proj-cinema" class="project-card reveal tilt-card" onclick="openVideo('EtYdtD6gfj0')" style="transition-delay:.24s">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/EtYdtD6gfj0/maxresdefault.jpg" alt="Cinema Glimpse — Feature Film" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>FEATURE FILM</span>
-        <h3>Cinema Glimpse</h3>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" id="proj-mims" class="project-card reveal tilt-card" onclick="openVideo('VPV2e7X3tW8')" style="transition-delay:.32s">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/VPV2e7X3tW8/maxresdefault.jpg" alt="MIMS Hospital Film — Commercial Ad" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>COMMERCIAL AD</span>
-        <h3>MIMS Hospital Film</h3>
-      </div>
-    </a>
-
-    <a href="javascript:void(0)" id="proj-clipo" class="project-card reveal tilt-card" onclick="openVideo('YX4K3Re_fo8')" style="transition-delay:.4s">
-      <div class="card-glow"></div>
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/YX4K3Re_fo8/maxresdefault.jpg" alt="Commercial for Clipo — Branded Ad Film" loading="lazy">
-        <div class="play-icon"><div class="play-icon-inner"><i data-lucide="play" style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div></div>
-      </div>
-      <div class="project-meta">
-        <span>BRANDED AD FILM</span>
-        <h3>Commercial for Clipo</h3>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<!-- Social Reels -->
-<section class="container">
-  <div class="section-title reveal">
-    <span class="section-num">02 — SHORT FORM</span>
-    <h2>The Social <span>Reels</span></h2>
-  </div>
-  <div class="shorts-grid">
-    <a href="javascript:void(0)" id="reel-1" class="project-card reveal tilt-card" onclick="openVideo('xoPA3820Ilk')">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/xoPA3820Ilk/maxresdefault.jpg" alt="Social Reel 1" loading="lazy"></div>
-    </a>
-    <a href="javascript:void(0)" id="reel-2" class="project-card reveal tilt-card" onclick="openVideo('88m1tJ62zHc')" style="transition-delay:.06s">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/88m1tJ62zHc/maxresdefault.jpg" alt="Social Reel 2" loading="lazy"></div>
-    </a>
-    <a href="javascript:void(0)" id="reel-3" class="project-card reveal tilt-card" onclick="openVideo('AuzAue8CWVs')" style="transition-delay:.12s">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/AuzAue8CWVs/maxresdefault.jpg" alt="Social Reel 3" loading="lazy"></div>
-    </a>
-    <a href="javascript:void(0)" id="reel-4" class="project-card reveal tilt-card" onclick="openVideo('YcsPlDXm8EQ')" style="transition-delay:.18s">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/YcsPlDXm8EQ/maxresdefault.jpg" alt="Social Reel 4" loading="lazy"></div>
-    </a>
-    <a href="javascript:void(0)" id="reel-5" class="project-card reveal tilt-card" onclick="openVideo('uQKXF7DjSv8')" style="transition-delay:.24s">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/uQKXF7DjSv8/maxresdefault.jpg" alt="Social Reel 5" loading="lazy"></div>
-    </a>
-    <a href="javascript:void(0)" id="reel-6" class="project-card reveal tilt-card" onclick="openVideo('Zu3RHnZ0QBA')" style="transition-delay:.3s">
-      <div class="card-glow"></div>
-      <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/Zu3RHnZ0QBA/maxresdefault.jpg" alt="Social Reel 6" loading="lazy"></div>
-    </a>
-  </div>
-</section>
-
-<!-- Stats -->
-<section class="container reveal" style="padding:5rem 0;">
-  <div class="stats-row">
-    <div class="stat-item">
-      <span class="stat-num" data-target="4">0</span>
-      <span class="stat-lbl">YEARS EXPERIENCE</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" data-target="50">0</span>
-      <span class="stat-lbl">PROJECTS COMPLETED</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" data-target="12">0</span>
-      <span class="stat-lbl">BRANDS WORKED WITH</span>
+  <!-- Video Modal -->
+  <div id="modal" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="close-modal" id="close-modal-btn" role="button" tabindex="0" aria-label="Close video">CLOSE [×]</div>
+    <div class="modal-content">
+      <iframe id="modal-iframe" width="100%" height="100%" src="" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
   </div>
-</section>
 
-<!-- About -->
-<section id="about" class="container">
-  <div class="about-wrap">
-    <div class="about-text reveal-left">
-      <span class="section-num" style="margin-bottom:1.5rem;">03 — ABOUT</span>
-      <h2>The Art of<br>the Cut.</h2>
-      <p>I primarily focus on visual storytelling, precise sound synchronization, and dynamic speed cuts. With over 4 years of hands-on experience, I transform raw footage into compelling narratives through creative editing and motion graphics.</p>
-      <div style="margin-top:3rem;">
-        <p class="toolkit-label">TOOLKIT</p>
-        <p class="toolkit-val">Premiere Pro &nbsp;/&nbsp; After Effects &nbsp;/&nbsp; Lightroom</p>
+  <!-- Header -->
+  <header id="main-header">
+    <div class="container nav">
+      <div class="logo">Medida Hari</div>
+      <button class="nav-toggle" id="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#work" id="nav-projects">PROJECTS</a></li>
+        <li><a href="#about" id="nav-about">ABOUT</a></li>
+        <li><a href="#contact" id="nav-contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container">
+    <div class="hero-bg-glow"></div>
+    <p class="hero-label">HI, I'M HARI</p>
+    <h1>Passionate Video Editor &<br><em>Motion Graphic Designer.</em></h1>
+    <p class="hero-desc">
+      I have 4 Years of Experience in <img src="Pr.png" alt="Premiere Pro" class="software-icon"><br>
+      1 Year in <img src="Ae.png" alt="After Effects" class="software-icon"><br>
+      I specialize In Cutting Teasers, Trailers, Promos, With precision And Creativity.
+    </p>
+    <div class="hero-sub">
+      <a href="#work" id="hero-cta"><span>EXPLORE PORTFOLIO</span></a>
+    </div>
+  </section>
+
+  <!-- Showreel Video -->
+  <section class="container" style="padding-top: 5rem; padding-bottom: 3rem;">
+    <div class="section-title reveal" style="padding: 0; padding-bottom: 3rem; margin-bottom: 0; border-bottom: none;">
+      <h2>Cinematic <span>Story Telling</span></h2>
+    </div>
+    <div class="showreel-wrapper reveal" style="position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--glow-gold);">
+      <video width="100%" autoplay loop muted playsinline controls style="display: block; filter: brightness(0.9) saturate(1.1);">
+        <source src="cinematic story telling.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-section" aria-hidden="true">
+    <div class="marquee-track">
+      <span>VISUAL DIRECTION</span><span class="dot">✦</span>
+      <span>MOTION DESIGN</span><span class="dot">✦</span>
+      <span>CINEMATIC EDIT</span><span class="dot">✦</span>
+      <span>COLOR GRADING</span><span class="dot">✦</span>
+      <span>SOUND DESIGN</span><span class="dot">✦</span>
+      <span>BRANDED CONTENT</span><span class="dot">✦</span>
+      <span>DOCUMENTARY</span><span class="dot">✦</span>
+      <span>VISUAL DIRECTION</span><span class="dot">✦</span>
+      <span>MOTION DESIGN</span><span class="dot">✦</span>
+      <span>CINEMATIC EDIT</span><span class="dot">✦</span>
+      <span>COLOR GRADING</span><span class="dot">✦</span>
+      <span>SOUND DESIGN</span><span class="dot">✦</span>
+      <span>BRANDED CONTENT</span><span class="dot">✦</span>
+      <span>DOCUMENTARY</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Projects -->
+  <section id="work" class="container">
+    <div class="section-title reveal">
+      <span class="section-num">01 — SELECTED WORKS</span>
+      <h2>Featured <span>Projects</span></h2>
+    </div>
+    <div class="project-grid">
+
+      <a href="javascript:void(0)" id="proj-army" class="project-card reveal tilt-card"
+        onclick="openVideo('zuq_vwBGz0E')">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/zuq_vwBGz0E/maxresdefault.jpg"
+            alt="Indian Army Assignment — Narrative Film" loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>NARRATIVE / 2024</span>
+          <h3>Indian Army Assignment</h3>
+        </div>
+      </a>
+
+      <a href="javascript:void(0)" id="proj-youtube" class="project-card reveal tilt-card"
+        onclick="openVideo('5txAqWaqnvM')" style="transition-delay:.08s">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/5txAqWaqnvM/maxresdefault.jpg" alt="YouTube's Future — Motion Design"
+            loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>MOTION DESIGN</span>
+          <h3>YouTube's Future</h3>
+        </div>
+      </a>
+
+      <a href="javascript:void(0)" id="proj-wedding" class="project-card reveal tilt-card"
+        onclick="openVideo('j0dOccga7mI')" style="transition-delay:.16s">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/j0dOccga7mI/maxresdefault.jpg"
+            alt="The Wedding Storyteaser — Cinematic Documentary" loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>CINEMATIC DOCUMENTARY</span>
+          <h3>The Wedding Storyteaser</h3>
+        </div>
+      </a>
+
+      <a href="javascript:void(0)" id="proj-cinema" class="project-card reveal tilt-card"
+        onclick="openVideo('EtYdtD6gfj0')" style="transition-delay:.24s">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/EtYdtD6gfj0/maxresdefault.jpg" alt="Cinema Glimpse — Feature Film"
+            loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>FEATURE FILM</span>
+          <h3>Cinema Glimpse</h3>
+        </div>
+      </a>
+
+      <a href="javascript:void(0)" id="proj-mims" class="project-card reveal tilt-card"
+        onclick="openVideo('VPV2e7X3tW8')" style="transition-delay:.32s">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/VPV2e7X3tW8/maxresdefault.jpg" alt="MIMS Hospital Film — Commercial Ad"
+            loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>COMMERCIAL AD</span>
+          <h3>MIMS Hospital Film</h3>
+        </div>
+      </a>
+
+      <a href="javascript:void(0)" id="proj-clipo" class="project-card reveal tilt-card"
+        onclick="openVideo('YX4K3Re_fo8')" style="transition-delay:.4s">
+        <div class="card-glow"></div>
+        <div class="video-thumb">
+          <img src="https://img.youtube.com/vi/YX4K3Re_fo8/maxresdefault.jpg"
+            alt="Commercial for Clipo — Branded Ad Film" loading="lazy">
+          <div class="play-icon">
+            <div class="play-icon-inner"><i data-lucide="play"
+                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
+          </div>
+        </div>
+        <div class="project-meta">
+          <span>BRANDED AD FILM</span>
+          <h3>Commercial for Clipo</h3>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Social Reels -->
+  <section class="container">
+    <div class="section-title reveal">
+      <span class="section-num">02 — SHORT FORM</span>
+      <h2>The Social <span>Reels</span></h2>
+    </div>
+    <div class="shorts-grid">
+      <a href="javascript:void(0)" id="reel-4" class="project-card reveal tilt-card" onclick="openVideo('YcsPlDXm8EQ')">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/YcsPlDXm8EQ/maxresdefault.jpg"
+            alt="Social Reel 4" loading="lazy"></div>
+      </a>
+      <a href="javascript:void(0)" id="reel-5" class="project-card reveal tilt-card" onclick="openVideo('uQKXF7DjSv8')"
+        style="transition-delay:.06s">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/uQKXF7DjSv8/maxresdefault.jpg"
+            alt="Social Reel 5" loading="lazy"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="container reveal" style="padding:5rem 0;">
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-num" data-target="4">0</span>
+        <span class="stat-lbl">YEARS EXPERIENCE</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="50">0</span>
+        <span class="stat-lbl">PROJECTS COMPLETED</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="12">0</span>
+        <span class="stat-lbl">BRANDS WORKED WITH</span>
       </div>
     </div>
-    <div class="about-img-wrap reveal-right">
-      <img src="DSC_0794.JPG.jpeg" alt="Hari — Editing Workspace" loading="lazy">
+  </section>
+
+  <!-- About -->
+  <section id="about" class="container">
+    <div class="about-wrap">
+      <div class="about-text reveal-left">
+        <span class="section-num" style="margin-bottom:1.5rem;">03 — ABOUT</span>
+        <h2>The Art of<br>the Cut.</h2>
+        <p>I primarily focus on visual storytelling, precise sound synchronization, and dynamic speed cuts. With over 4
+          years of hands-on experience, I transform raw footage into compelling narratives through creative editing and
+          motion graphics.</p>
+        <div style="margin-top:3rem;">
+          <p class="toolkit-label">TOOLKIT</p>
+          <p class="toolkit-val">Premiere Pro &nbsp;/&nbsp; After Effects &nbsp;/&nbsp; Lightroom</p>
+        </div>
+      </div>
+      <div class="about-img-wrap reveal-right">
+        <img src="DSC_0794.JPG.jpeg" alt="Hari — Editing Workspace" loading="lazy">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact -->
-<section id="contact" class="contact-section container reveal">
-  <div class="contact-glow"></div>
-  <div class="contact-glow-2"></div>
-  <span class="section-num">04 — CONTACT</span>
-  <h2>Let's build<br>something <em>extraordinary.</em></h2>
-  <a href="https://wa.me/+918639647773" class="contact-cta" id="contact-whatsapp" target="_blank" rel="noopener">Start Chatting →</a>
-  <div class="contact-row reveal" style="margin-top:8rem;">
-    <a href="https://www.instagram.com/hari_story_narrator" target="_blank" rel="noopener" class="social-link" id="link-instagram">INSTAGRAM</a>
-    <a href="https://www.linkedin.com/in/hari-creations-99b3ab247" target="_blank" rel="noopener" class="social-link" id="link-linkedin">LINKEDIN</a>
-    <a href="https://youtube.com/@harichandraprasad-l5t5r" target="_blank" rel="noopener" class="social-link" id="link-youtube">YOUTUBE</a>
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact" class="contact-section container reveal">
+    <div class="contact-glow"></div>
+    <div class="contact-glow-2"></div>
+    <span class="section-num">04 — CONTACT</span>
+    <h2>Let's build<br>something <em>extraordinary.</em></h2>
+    <a href="https://wa.me/+918639647773" class="contact-cta" id="contact-whatsapp" target="_blank" rel="noopener">Start
+      Chatting →</a>
+    <div class="contact-row reveal" style="margin-top:8rem;">
+      <a href="https://www.instagram.com/hari_story_narrator" target="_blank" rel="noopener" class="social-link"
+        id="link-instagram">INSTAGRAM</a>
+      <a href="https://www.linkedin.com/in/hari-creations-99b3ab247" target="_blank" rel="noopener" class="social-link"
+        id="link-linkedin">LINKEDIN</a>
+      <a href="https://youtube.com/@harichandraprasad-l5t5r" target="_blank" rel="noopener" class="social-link"
+        id="link-youtube">YOUTUBE</a>
+    </div>
+  </section>
 
-<footer>HARI STUDIO &nbsp;/&nbsp; © 2024 &nbsp;/&nbsp; ALL RIGHTS RESERVED</footer>
+  <footer>Medida Hari &nbsp;/&nbsp; © 2024 &nbsp;/&nbsp; ALL RIGHTS RESERVED</footer>
 
-<script>
-  lucide.createIcons();
+  <script>
+    lucide.createIcons();
 
-  /* ── Particle Canvas ── */
-  const canvas = document.getElementById('bg-canvas');
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [];
 
-  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-  resize();
-  window.addEventListener('resize', resize);
 
-  class Particle {
-    constructor() { this.reset(); }
-    reset() {
-      this.x = Math.random() * W;
-      this.y = Math.random() * H;
-      this.z = Math.random() * 2 + .5;
-      this.r = Math.random() * 1.1 + .2;
-      this.speed = Math.random() * .25 + .08;
-      this.angle = Math.random() * Math.PI * 2;
-      this.alpha = Math.random() * .5 + .08;
-      this.color = Math.random() > .65 ? '#c9a96e' : (Math.random() > .5 ? '#8b5cf6' : '#06b6d4');
+    /* ── Header scroll state ── */
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile Navigation Toggle ── */
+    const navToggle = document.getElementById('nav-toggle-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navToggle.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
     }
-    update() {
-      this.y -= this.speed * this.z;
-      this.x += Math.sin(this.angle) * .18;
-      this.angle += .004;
-      if (this.y < -5) { this.reset(); this.y = H + 5; }
+
+    /* ── Custom Cursor ── */
+    const cursor = document.getElementById('cursor');
+    const trail = document.getElementById('cursor-trail');
+    let mx = 0, my = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.left = mx - 4 + 'px';
+      cursor.style.top = my - 4 + 'px';
+      trail.style.transform = `translate(${mx - 19}px, ${my - 19}px)`;
+    });
+
+    document.querySelectorAll('a, button, [role="button"]').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); trail.classList.add('hover'); });
+      el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); trail.classList.remove('hover'); });
+    });
+
+    /* ── Scroll Reveal ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    /* ── Stats Counter ── */
+    const statObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          const target = +el.dataset.target;
+          let cur = 0;
+          const inc = target / 70;
+          const timer = setInterval(() => {
+            cur += inc;
+            if (cur >= target) { el.textContent = target + '+'; clearInterval(timer); }
+            else el.textContent = Math.floor(cur);
+          }, 22);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: .6 });
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => statObserver.observe(el));
+
+    /* ── 3D Tilt Cards ── */
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - .5;
+        const y = (e.clientY - rect.top) / rect.height - .5;
+        card.style.transform = `perspective(700px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateZ(12px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(700px) rotateY(0deg) rotateX(0deg) translateZ(0)';
+      });
+    });
+
+    /* ── Video Modal ── */
+    const modal = document.getElementById('modal');
+    const iframe = document.getElementById('modal-iframe');
+
+    function openVideo(id) {
+      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&color=white`;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r * this.z, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.globalAlpha = this.alpha;
-      ctx.fill();
-      ctx.globalAlpha = 1;
+
+    function closeModal() {
+      modal.classList.remove('active');
+      iframe.src = '';
+      document.body.style.overflow = '';
     }
-  }
 
-  for (let i = 0; i < 140; i++) particles.push(new Particle());
-
-  function animParticles() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(animParticles);
-  }
-  animParticles();
-
-  /* ── Header scroll state ── */
-  const header = document.getElementById('main-header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
-  /* ── Custom Cursor ── */
-  const cursor = document.getElementById('cursor');
-  const trail = document.getElementById('cursor-trail');
-  let mx = 0, my = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx - 4 + 'px';
-    cursor.style.top  = my - 4 + 'px';
-    trail.style.transform = `translate(${mx - 19}px, ${my - 19}px)`;
-  });
-
-  document.querySelectorAll('a, button, [role="button"]').forEach(el => {
-    el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); trail.classList.add('hover'); });
-    el.addEventListener('mouseleave', () => { cursor.classList.remove('hover'); trail.classList.remove('hover'); });
-  });
-
-  /* ── Scroll Reveal ── */
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
-
-  /* ── Stats Counter ── */
-  const statObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const el = e.target;
-        const target = +el.dataset.target;
-        let cur = 0;
-        const inc = target / 70;
-        const timer = setInterval(() => {
-          cur += inc;
-          if (cur >= target) { el.textContent = target + '+'; clearInterval(timer); }
-          else el.textContent = Math.floor(cur);
-        }, 22);
-        statObserver.unobserve(el);
-      }
-    });
-  }, { threshold: .6 });
-  document.querySelectorAll('.stat-num[data-target]').forEach(el => statObserver.observe(el));
-
-  /* ── 3D Tilt Cards ── */
-  document.querySelectorAll('.tilt-card').forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width  - .5;
-      const y = (e.clientY - rect.top)  / rect.height - .5;
-      card.style.transform = `perspective(700px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateZ(12px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(700px) rotateY(0deg) rotateX(0deg) translateZ(0)';
-    });
-  });
-
-  /* ── Video Modal ── */
-  const modal = document.getElementById('modal');
-  const iframe = document.getElementById('modal-iframe');
-
-  function openVideo(id) {
-    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&color=white`;
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    modal.classList.remove('active');
-    iframe.src = '';
-    document.body.style.overflow = '';
-  }
-
-  document.getElementById('close-modal-btn').addEventListener('click', closeModal);
-  document.getElementById('close-modal-btn').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') closeModal(); });
-  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
-</script>
+    document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+    document.getElementById('close-modal-btn').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') closeModal(); });
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('active')) closeModal(); });
+  </script>
 </body>
+
 </html>
