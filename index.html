@@ -28,7 +28,8 @@
     <div class="modal-content">
       <iframe id="modal-iframe" width="100%" height="100%" src="" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        allowfullscreen style="display: none;"></iframe>
+      <video id="modal-video" width="100%" height="100%" controls style="display: none; object-fit: contain;"></video>
     </div>
   </div>
 
@@ -53,11 +54,12 @@
   <section class="hero container">
     <div class="hero-bg-glow"></div>
     <p class="hero-label">HI, I'M HARI</p>
-    <h1>Passionate Video Editor &<br><em>Motion Graphic Designer.</em></h1>
+    <h1>Passionate Video Editor,<br>Cinematographer &<br><em>Motion Graphic Designer.</em></h1>
     <p class="hero-desc">
       I have <strong>4 Years of Experience</strong> in <img src="Pr.png" alt="Premiere Pro" class="software-icon"><br>
       <strong>1 Year</strong> in <img src="Ae.png" alt="After Effects" class="software-icon"><br>
-      I specialize In Cutting <strong>Teasers, Trailers, Promos</strong>, With <strong>precision and creativity</strong>.
+      I specialize In Cutting <strong>Teasers, Trailers, Promos</strong>, With <strong>precision and
+        creativity</strong>.
     </p>
     <div class="hero-sub">
       <a href="#work" id="hero-cta"><span>EXPLORE PORTFOLIO</span></a>
@@ -69,8 +71,10 @@
     <div class="section-title reveal" style="padding: 0; padding-bottom: 3rem; margin-bottom: 0; border-bottom: none;">
       <h2>Cinematic <span>Story Telling</span></h2>
     </div>
-    <div class="showreel-wrapper reveal" style="position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--glow-gold);">
-      <video width="100%" autoplay loop muted playsinline controls style="display: block; filter: brightness(0.9) saturate(1.1);">
+    <div class="showreel-wrapper reveal"
+      style="position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--glow-gold);">
+      <video width="100%" autoplay loop muted playsinline controls
+        style="display: block; filter: brightness(0.9) saturate(1.1);">
         <source src="cinematic story telling.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -105,22 +109,7 @@
     </div>
     <div class="project-grid">
 
-      <a href="javascript:void(0)" id="proj-army" class="project-card reveal tilt-card"
-        onclick="openVideo('zuq_vwBGz0E')">
-        <div class="card-glow"></div>
-        <div class="video-thumb">
-          <img src="https://img.youtube.com/vi/zuq_vwBGz0E/maxresdefault.jpg"
-            alt="Indian Army Assignment — Narrative Film" loading="lazy">
-          <div class="play-icon">
-            <div class="play-icon-inner"><i data-lucide="play"
-                style="width:1.4rem;height:1.4rem;stroke-width:2;color:#c9a96e;margin-left:3px;"></i></div>
-          </div>
-        </div>
-        <div class="project-meta">
-          <span>NARRATIVE / 2024</span>
-          <h3>Indian Army Assignment</h3>
-        </div>
-      </a>
+
 
       <a href="javascript:void(0)" id="proj-youtube" class="project-card reveal tilt-card"
         onclick="openVideo('5txAqWaqnvM')" style="transition-delay:.08s">
@@ -217,13 +206,52 @@
       <h2>The Social <span>Reels</span></h2>
     </div>
     <div class="shorts-grid">
-      <a href="javascript:void(0)" id="reel-4" class="project-card reveal tilt-card" onclick="openVideo('YcsPlDXm8EQ')">
+      <a href="javascript:void(0)" id="reel-1" class="project-card reveal tilt-card" onclick="openVideo('reeel1.mp4')">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb">
+          <video width="100%" height="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; display: block; filter: brightness(0.9) saturate(1.1);">
+            <source src="reeel1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="javascript:void(0)" id="reel-2" class="project-card reveal tilt-card" onclick="openVideo('reeel2.MP4')" style="transition-delay:.04s">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb">
+          <video width="100%" height="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; display: block; filter: brightness(0.9) saturate(1.1);">
+            <source src="reeel2.MP4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="javascript:void(0)" id="reel-3" class="project-card reveal tilt-card" onclick="openVideo('reeel3.mp4')" style="transition-delay:.08s">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb">
+          <video width="100%" height="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; display: block; filter: brightness(0.9) saturate(1.1);">
+            <source src="reeel3.mp4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="javascript:void(0)" id="reel-4" class="project-card reveal tilt-card" onclick="openVideo('reeel4.MP4')" style="transition-delay:.12s">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb">
+          <video width="100%" height="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; display: block; filter: brightness(0.9) saturate(1.1);">
+            <source src="reeel4.MP4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="javascript:void(0)" id="reel-5" class="project-card reveal tilt-card" onclick="openVideo('reeel5.MP4')" style="transition-delay:.16s">
+        <div class="card-glow"></div>
+        <div class="video-thumb short-thumb">
+          <video width="100%" height="100%" autoplay loop muted playsinline style="object-fit: cover; width: 100%; height: 100%; display: block; filter: brightness(0.9) saturate(1.1);">
+            <source src="reeel5.MP4" type="video/mp4">
+          </video>
+        </div>
+      </a>
+      <a href="javascript:void(0)" id="reel-y4" class="project-card reveal tilt-card" onclick="openVideo('YcsPlDXm8EQ')" style="transition-delay:.2s">
         <div class="card-glow"></div>
         <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/YcsPlDXm8EQ/maxresdefault.jpg"
             alt="Social Reel 4" loading="lazy"></div>
       </a>
-      <a href="javascript:void(0)" id="reel-5" class="project-card reveal tilt-card" onclick="openVideo('uQKXF7DjSv8')"
-        style="transition-delay:.06s">
+      <a href="javascript:void(0)" id="reel-y5" class="project-card reveal tilt-card" onclick="openVideo('uQKXF7DjSv8')" style="transition-delay:.24s">
         <div class="card-glow"></div>
         <div class="video-thumb short-thumb"><img src="https://img.youtube.com/vi/uQKXF7DjSv8/maxresdefault.jpg"
             alt="Social Reel 5" loading="lazy"></div>
@@ -380,9 +408,22 @@
     /* ── Video Modal ── */
     const modal = document.getElementById('modal');
     const iframe = document.getElementById('modal-iframe');
+    const modalVideo = document.getElementById('modal-video');
 
     function openVideo(id) {
-      iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&color=white`;
+      if (id.endsWith('.mp4') || id.endsWith('.MP4')) {
+        iframe.style.display = 'none';
+        iframe.src = '';
+        modalVideo.style.display = 'block';
+        modalVideo.src = id;
+        modalVideo.play();
+      } else {
+        modalVideo.style.display = 'none';
+        modalVideo.src = '';
+        modalVideo.pause();
+        iframe.style.display = 'block';
+        iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&modestbranding=1&rel=0&color=white`;
+      }
       modal.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -390,6 +431,8 @@
     function closeModal() {
       modal.classList.remove('active');
       iframe.src = '';
+      modalVideo.src = '';
+      modalVideo.pause();
       document.body.style.overflow = '';
     }
 
