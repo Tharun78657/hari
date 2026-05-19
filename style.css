@@ -262,20 +262,21 @@ header.scrolled {
 }
 
 .hero h1 {
-  font-family: var(--font-body);
-  font-size: clamp(2.5rem, 6vw, 6rem);
-  line-height: .95;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -.04em;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  line-height: 1.15;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0.01em;
   color: #fff;
   animation: fadeUp .9s .4s both;
 }
 
 .hero h1 em {
-  font-style: normal;
-  display: block;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 40%, var(--purple) 100%);
+  font-style: italic;
+  display: inline;
+  font-weight: 400;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 50%, var(--text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
@@ -295,9 +296,11 @@ header.scrolled {
 }
 
 .hero-desc {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--text);
+  font-family: var(--font-label);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: rgba(239, 239, 239, 0.7);
   line-height: 1.8;
   margin-top: 2rem;
   max-width: 700px;
@@ -306,17 +309,17 @@ header.scrolled {
 
 .hero-desc strong {
   color: var(--gold);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .hero-desc .software-icon {
-  height: 1.6em;
+  height: 1.25em;
   width: auto;
   vertical-align: middle;
-  margin: 0 6px;
+  margin: 0 4px;
   transform: translateY(-2px);
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-sub {
@@ -931,10 +934,20 @@ header.scrolled {
   transform-origin: left;
 }
 
+.contact-cta .arrow {
+  display: inline-block;
+  transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: 0.3rem;
+}
+
+.contact-cta:hover .arrow {
+  transform: translateX(8px);
+}
+
 .contact-row {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 3rem;
   margin-top: 9rem;
 }
 
@@ -942,30 +955,62 @@ header.scrolled {
   color: var(--text-dim);
   text-decoration: none;
   font-family: var(--font-label);
-  font-size: .6rem;
-  letter-spacing: .25em;
-  font-weight: 700;
-  transition: color .4s ease;
+  font-size: 0.65rem;
+  letter-spacing: .2em;
+  font-weight: 600;
+  transition: all .4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.social-link i,
+.social-link svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  stroke-width: 1.5;
+  transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), color .4s ease;
+}
+
+.social-link span {
+  transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .social-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--gold);
-  transition: .4s var(--ease-out-expo);
+  inset: 0;
+  border-radius: 50px;
+  background: radial-gradient(circle at center, rgba(201, 169, 110, 0.15), transparent 70%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  z-index: -1;
 }
 
 .social-link:hover {
+  color: var(--gold-light);
+  border-color: rgba(201, 169, 110, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px -10px rgba(201, 169, 110, 0.2);
+}
+
+.social-link:hover i,
+.social-link:hover svg {
+  transform: scale(1.15) rotate(-8deg);
   color: var(--gold);
 }
 
 .social-link:hover::after {
-  width: 100%;
+  opacity: 1;
 }
 
 /* ── Footer ── */
@@ -1151,6 +1196,55 @@ footer {
     top: 1.5rem;
     right: 1.5rem;
     padding: .4rem 1rem;
+  }
+}
+
+/* ── Digital Marketing Section ── */
+.marketing-title {
+  padding: 5rem 0 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.marketing-title h2 {
+  font-family: var(--font-body); /* Space Grotesk */
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.marketing-title h2 span {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.marketing-card:hover .video-thumb {
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.marketing-card .card-glow {
+  background: linear-gradient(135deg, var(--purple), var(--cyan));
+}
+
+@media(max-width: 1100px) {
+  .marketing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 680px) {
+  .marketing-grid {
+    grid-template-columns: 1fr;
   }
 }
 
